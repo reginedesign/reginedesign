@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Regine Web Portfolio</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="css/MontserratFont.css" rel="stylesheet" type="text/css">
+    <link href="css/LatoFont.css" rel="stylesheet" type="text/css">
+	
+   <link rel="stylesheet" href="css/layout.css">
+    <link href="css/animate.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+        
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            
+            var filterList = {
+            
+                init: function () {
+                
+                    // MixItUp plugin
+                    // http://mixitup.io
+                    $('#portfoliolist').mixItUp({
+                        selectors: {
+                          target: '.portfolioImages',
+                          filter: '.filter' 
+                        },
+                        load: {
+                          filter: '.illus, .design, .anim, .photo' 
+                        }     
+                    });                             
+                
+                }
+
+            };
+            
+            // Run the show!
+            filterList.init();
+        }); 
+    </script>
+
+    <script src="js/sweetalert2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/sweetalert2.min.css">
+</head>
+
+<body id="page-top" class="index">
+<div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">Regine Design</a></div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container" id="maincontent" tabindex="-1">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="img/Illustrations/drawing(circle).png" width="400" alt="MyArt">
+                    <div class="intro-text">
+                      <h1 class="name">Regine Tan</h1>
+                      <hr class="thick_line">
+                      <span class="skills">Graphic Designer - Animator - Illustrator - Special Effects</span></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Portfolio</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <p>
+                    <ul id="filters" class="clearfix">
+                        <li class="col-sm-3"><span class="filter active" data-filter=".illus, .design, .anim, .photo">All</span></li>
+                        <li class="col-sm-3"><span class="filter" data-filter=".illus">Illustration</span></li>
+                        <li class="col-sm-3"><span class="filter" data-filter=".design">Design</span></li>
+                        <li class="col-sm-3"><span class="filter" data-filter=".anim">Animation</span></li>
+                        <li class="col-sm-3"><span class="filter" data-filter=".photo">Photography</span></li>
+                    </ul>
+                </p>
+            </div>
+
+
+            <div id="portfoliolist">
+            
+
+                <div class="portfolioImages illus" data-cat="illus" data-title="Chibi Coke" data-description="A portrait art." data-date=" June 2017" data-resource="image" data-source="img/Illustrations/SIS_project/chibiCOKE1.png" >
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Illustrations/SIS_project/CropchibiCOKE.jpg" alt="CharacterDesign" />
+                    </div>
+                </div>  
+
+                <div class="portfolioImages design" data-cat="design" data-title="Layout" data-description="A layout for a non exsisting company. Did this for my school work." data-date=" August 2016" data-resource="image" data-source="img/Illustrations/Company_Layout.jpg">
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Illustrations/CropCompany_Layout.jpg" alt="Layout" />
+                    </div>
+                </div>  
+
+                <div class="portfolioImages illus" data-cat="illus" data-title="PaperWork" data-description="A portrait art." data-date=" June 2017" data-resource="image" data-source="img/Illustrations/SIS_project/FatUncle1.png" >
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Illustrations/SIS_project/FatUncle1.png" alt="CharacterDesign" />
+                    </div>
+                </div>  
+
+                <div class="portfolioImages anim" data-resource="video" data-title="Stop Animation" data-description="A stop animation that I did during a workshop." data-date=" October 2015" data-source="https://www.youtube.com/embed/ghMwlauaJOA" data-cat="anim">
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Animation/CropstopAnim.jpg" alt="StopAnimation" />
+                    </div>
+                </div>  
+
+                <div class="portfolioImages illus" data-cat="illus" data-title="Guitar Player" data-description="A portrait art." data-date=" June 2017" data-resource="image" data-source="img/Illustrations/SIS_project/guitar3.png">
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Illustrations/SIS_project/guitar3.png" alt="CharacterDesign" />
+                    </div>
+                </div>
+
+                <div class="portfolioImages illus" data-cat="illus" data-title="Idol Teacher" data-description="A portrait art." data-date=" June 2017" data-resource="image" data-source="img/Illustrations/SIS_project/IdolTeacher2.png">
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Illustrations/SIS_project/IdolTeacher2.png" alt="CharacterDesign" />
+                    </div>
+                </div>  
+
+                <div class="portfolioImages illus" data-cat="illus" data-title="NDP Male Motivator" data-description="Portriat Art of my mentor, during NDP Golden Jubliee" data-date="  August 2015"  data-resource="image" data-source="img/Illustrations/ndp/JJ_sai.jpg">
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Illustrations/ndp/CropJJ_sai.jpg" alt="CharacterDesign" />
+                    </div>
+                </div>  
+
+
+                <div class="portfolioImages illus" data-cat="illus" data-title="Perspective Sketch" data-description="A portrait art." data-date="  August 2016" data-resource="image" data-source="img/Illustrations/TrainSketch2.jpg">
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Illustrations/CropTrainSketch2.jpg" alt="Sketch" />
+                    </div>
+                </div>  
+
+
+
+                <div class="portfolioImages illus" data-cat="illus" data-title="NDP Female Motivator" data-description="Portriat Art of my mentor, during NDP Golden Jubliee" data-date=" August 2015" data-resource="image" data-source="img/Illustrations/ndp/Meiyunn_sai.jpg">
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Illustrations/ndp/CropMeiyunn_sai.jpg" alt="CharacterDesign" />
+                    </div>
+                </div>  
+
+                <div class="portfolioImages illus" data-cat="illus" data-title="Character Expression" data-description="A character that I came out with, exploring different styles and expression." data-date=" April 2017" data-resource="image" data-source="img/Illustrations/OldFYP/blindGirl5.jpg">
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Illustrations/OldFYP/blindGirl5.jpg" alt="CharacterDesign" />
+                    </div>
+                </div>  
+
+                <div class="portfolioImages design" data-cat="design" data-title="Logo" data-description="A logo that I made for a friend. Called Founder." data-date=" October 2017" data-resource="image" data-source="img/Illustrations/Founder_Logo.png">
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Illustrations/CropFounder_Logo.jpg" alt="Logo" />
+                    </div>
+                </div>  
+
+                <div class="portfolioImages anim" data-resource="video" data-title="3D Demo Reel" data-description="A demo reel of my 3D works." data-date=" Feburary 2017" data-source="https://www.youtube.com/embed/tQ56fiHtx5U" data-cat="anim">
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Animation/Crop3dPokemon.jpg" alt="DemoReel" />
+                    </div>
+                </div>  
+
+                <div class="portfolioImages design" data-cat="design" data-title="Magazine cover" data-description="A school work for Republic Polytechnic." data-date=" January 2017" data-resource="image" data-source="img/Illustrations/00001.jpg">
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Illustrations/CropMagazine.jpg" alt="Magazine Cover" />
+                    </div>
+                </div>  
+
+                <div class="portfolioImages design" data-cat="design" data-title="Logo" data-description="A Logo for a non exsisting company. Did this for my school work. This logo represents a pet grooming hub." data-date=" January 2017" data-resource="image" data-source="img/Illustrations/petHub_logo2.jpg">
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Illustrations/CroppetHub_logo2.jpg" alt="Logo" />
+                    </div>
+                </div> 
+                
+                <div class="portfolioImages design" data-cat="design" data-title="Lowpoly Portrait Art" data-description="A low-poly art of myself." data-date=" July 2016" data-resource="image" data-source="img/Illustrations/Vectorme_09_Regine.jpg">
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Illustrations/CropVectorme_09_Regine.jpg" alt="Logo" />
+                    </div>
+                </div>
+                
+                <div class="portfolioImages design" data-cat="design" data-title="Typography" data-description="A typrography of letters A-Z." data-date=" July 2016" data-resource="image" data-source="img/Illustrations/FontArt-03.jpg">
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Illustrations/CropFontArt-03.jpg" alt="Logo" />
+                    </div>
+                </div>
+                
+                <div class="portfolioImages photo" data-cat="design" data-title="Toothless" data-description="This was taken with my mobile phone Samsung Note 4." data-date=" December 2016" data-resource="image" data-source="img/Photography/toothless.jpg">
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Photography/Croptoothless.jpg" alt="toothless" />
+                    </div>
+                </div>
+                
+                <div class="portfolioImages photo" data-cat="design" data-title="Wooden Floor" data-description="This was taken with my mobile phone Samsung A9 pro. This was taken during my trip to Indonesia, Malang during a school trip." data-date=" March 2017" data-resource="image" data-source="img/Photography/wood.jpg">
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Photography/Cropwood.jpg" alt="wooden floor" />
+                    </div>
+                </div>
+                
+                <div class="portfolioImages photo" data-cat="design" data-title="Silvey" data-description="This is my pet dog named Silvey. Taken with a Canon EOS 650D." data-date=" July 2017" data-resource="image" data-source="img/Photography/Silvey.jpg">
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Photography/CropSilvey.jpg" alt="dog" />
+                    </div>
+                </div> 
+                
+                <div class="portfolioImages photo" data-cat="design" data-title="What are you looking at?" data-description="This is my pet dog named Silvey. Part 2. Taken with a Canon EOS 650D. Silvey clearly does not want me to keep taking her photos." data-date=" July 2017" data-resource="image" data-source="img/Photography/silvey2.jpg">
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Photography/Cropsilvey2.jpg" alt="dog" />
+                    </div>
+                </div>
+                
+                <div class="portfolioImages photo" data-cat="design" data-title="Let me lay here" data-description="This is my pet dog named Baby. Taken with a Canon EOS 650D. Baby decides to be part of my photo taking session." data-date=" July 2017" data-resource="image" data-source="img/Photography/baby.jpg">
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Photography/Cropbaby.jpg" alt="dog" />
+                    </div>
+                </div>
+                
+                <div class="portfolioImages photo" data-cat="design" data-title="Rainbow Village" data-description="This was taken with my mobile phone Samsung A9 pro. This was taken during my trip to Indonesia, Malang during a school trip." data-date=" March 2017" data-resource="image" data-source="img/Photography/rainbowTown.jpg">
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Photography/CroprainbowTown.jpg" alt="Rainbow Village" />
+                    </div>
+                </div>
+                
+                <div class="portfolioImages photo" data-cat="design" data-title="Korea" data-description="This was taken with my mobile phone Samsung A9 pro. This was taken during my trip to Korea during a school trip, when I visited the palace." data-date=" April 2017" data-resource="image" data-source="img/Photography/korea.jpg">
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Photography/Cropkorea.jpg" alt="korea" />
+                    </div>
+                </div>
+                
+                <div class="portfolioImages photo" data-cat="design" data-title="Lights" data-description="Taken with a Canon EOS 650D. Lights taken by the carnival." data-date=" July 2017" data-resource="image" data-source="img/Photography/lights.jpg">
+                    <div class="portfolioImages-wrapper">             
+                        <img src="img/Photography/Croplights.jpg" alt="lights" />
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About</h2>
+                    <hr class="thick_line">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 customAlignment">
+                    <p>Hi! My name is Regine Tan, I am from Singapore and currently studying in Republic Polytechnic pursuing Diploma in Interactive And Digital Media.</p>
+                </div>
+                <div class="col-lg-10 col-lg-offset-1 customAlignment">
+                    <p>I like to draw when I have my free time, and I have been doodling ever since I was young. What made me came to enjoy drawing started with cartoon shows that I would wake up every morning just to watch. One of my most memorable cartoon that inspired me to start drawing was Pokemon, and till today, I still draw my favourite cartoon.</p>
+                </div>
+                <div class="col-lg-10 col-lg-offset-1 customAlignmentLast">
+                    <p>Besides drawing, I do have a interest in the field of Animation. This interest let me to my current status. I have brushed up my skills and refine my school work to be of industrial standard, that I hope will be feature in future movies or shows. This is only what I can achieve in school. Just imagine what I can achieve in the industry. Here is a philosophy that I live by “Everybody has a unique style. Art is subjective to the eye of the beholder.”</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Contact Me</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                    <form name="sentMessage" id="contactForm" method="post" validate>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" placeholder="Name" name="name" id="name" required data-validation-required-message="Please enter your name." required="true">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label for="email">Email Address</label>
+                                <input type="email" class="form-control" name="email" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address." required="true">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label for="message">Message</label>
+                                <textarea rows="5" class="form-control" name="message" placeholder="Message" id="message" required data-validation-required-message="Please enter a message." required="true"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div id="success"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" class="btn btn-success btn-lg">Send</button>
+                            </div>
+                        </div>
+                        <div>
+                       		<div class="col-lg-12 text-center">
+                       			<h3>Or</h3>
+                    			<p>Email me at: reginetanweilin95@gmail.com</p>
+                			</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+						<p>Singapore</p>
+                            <!--<br>Beverly Hills, CA 90210</p>-->
+                  	</div>
+                    <div class="footer-col col-md-4">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="https://www.facebook.com/reginetanweilin" class="btn-social btn-outline"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/108145187485212384160" class="btn-social btn-outline"><span class="sr-only">Google Plus</span><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <!--<li>
+                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Twitter</span><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>-->
+                            <li>
+                                <a href="https://www.linkedin.com/in/regine-tan-aba2b6144/" class="btn-social btn-outline"><span class="sr-only">Linked In</span><i class="fa fa-fw fa-linkedin"></i></a>
+							</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                      <h3>About Me</h3>
+                      <p>Just started out. Thank you for your paitence. Hope to show you more in the future!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; RegineTan 2017
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+	<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="js/EmailJS.js"></script>
+    
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+
+    <!-- Theme JavaScript -->
+    <script src="js/freelancer.min.js"></script>
+
+
+    <!--Grids salvattore -->
+    <script src="js/salvattore.min.js"></script>
+
+    <script>
+        var deviceWidth = 0;
+
+        for (var i = 100; !window.matchMedia('(max-device-width: ' + i + 'px)').matches; i++) {
+            deviceWidth = i;
+        }
+
+        deviceWidth-=100;
+
+        if (deviceWidth > 600){
+            deviceWidth = 600
+        }
+        
+        $(".portfolioImages").click(function() {
+            var type = $(this).attr("data-resource");
+            var source = $(this).attr("data-source");
+            console.log(source)
+			var title = $(this).attr("data-title");
+			var description = $(this).attr("data-description");
+			var date = $(this).attr("data-date");
+
+
+            if(type == "image"){
+
+                var img = new Image();
+
+                img.onload = function() {
+
+                    var width = this.width;
+                    var height = this.height;
+                    console.log("height = " + height + "  width = " + width);
+
+                    while(width > deviceWidth){
+                        height = height/1.2;
+                        width = width/1.2;
+                        console.log("height = " + height + "  width = " + width + " Device width: " + deviceWidth);
+                    }
+
+                    swal({
+
+
+                    html:
+                    '<p><b class="title_size">'+title+'</b></p><img width="'+width+'" height = "'+height+'" src="'+source+'"/><p>'+description+'</p><br/><p style="font-size: 15px">Date:'+date+'</p>',                      
+                      width: (width + 100),
+                      animation: false,
+                      showConfirmButton: false,
+                      showCloseButton: true,
+                      padding: 45
+                    });
+                };
+
+                img.src = source;
+
+
+            }else if(type == "video"){
+                
+                swal({
+                  html:
+                    '<p><b class="title_size">'+title+'</b></p><div class="video-container">'+
+                    '<iframe width="560" height="315" src="'+source+'" frameborder="0" allowfullscreen></iframe>'+
+                    '</div><p>'+description+'</p><br/><p style="font-size: 15px">Date:'+date+'</p>',
+                  showCloseButton: true,
+                  showConfirmButton: false,
+                  width: (deviceWidth+100),
+                  animation: false,
+                  padding: 45
+                });
+           }
+
+        });
+    </script>
+
+</body>
+
+</html>
