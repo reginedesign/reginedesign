@@ -417,8 +417,16 @@
                 if(media.includes('Animation')){
                     var vidSrc = $(this).attr("data-source");
                     $('#my_video').attr('src',vidSrc);
-                    $('#my_video').attr('width',560);
-                    $('#my_video').attr('height',315);
+                    var width = 560;
+                    var height = 315;
+
+                    while(width > deviceWidth){
+                        height = height/1.2;
+                        width = width/1.2;
+                    }
+                    $('#my_video').attr('width',width);
+                    $('#my_video').attr('height',height);
+                    
                     $('#myModal').modal({show:true});
                 }else{  
 
