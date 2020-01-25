@@ -22,7 +22,7 @@
     		text: 'Your message have been sent! :)'
     	}).show();
     	myform.find("button").text("Send");
-    	myform.find("input[type=text], textarea").val("");
+    	myform.find("input[type=text],input[type=email], textarea").val("");
     }, function(err) {
     	new Noty({
     		theme: 'nest',
