@@ -18,6 +18,8 @@
     	new Noty({
     		theme: 'nest',
     		type: 'success',
+    		killer: true,
+    		timeout: 1000,
     		layout: 'topRight',
     		text: 'Your message have been sent! :)'
     	}).show();
