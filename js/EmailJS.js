@@ -23,8 +23,10 @@
     		layout: 'topRight',
     		text: 'Your message have been sent! :)'
     	}).show();
-    	myform.find("button").text("Send");
+    	myform.find("button").text("Send Message");
     	myform.find("input[type=text],input[type=email], textarea").val("");
+        document.getElementById("submitFormBtn").disabled = true;
+        grecaptcha.reset()
     }, function(err) {
     	new Noty({
     		theme: 'nest',
@@ -35,7 +37,7 @@
     		text: 'Oh no! Something went wrong! :('
     	}).show();
     	console.log(err)
-    	myform.find("button").text("Send");
+    	myform.find("button").text("Send Message");
     });
     return false;
 })

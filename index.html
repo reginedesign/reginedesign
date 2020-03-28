@@ -352,9 +352,9 @@
                                     </div>
                                     <div class="clearfix"></div>
                                     <div class="col-lg-12 text-center">
-                                    	<div class="g-recaptcha" style="display: inline-block;" data-sitekey="6Lexw-QUAAAAAMQ_l_5aYg4E42wN6lRV-f41S6gl"></div>
+                                    	<div class="g-recaptcha" style="display: inline-block;" data-sitekey="6Lexw-QUAAAAAMQ_l_5aYg4E42wN6lRV-f41S6gl" data-callback="enableBtn"></div>
                                         <div id="success"></div>
-                                        <button type="submit" class="btn btn-xl">Send Message</button>
+                                        <button id="submitFormBtn" type="submit" class="btn btn-xl" disabled="true">Send Message</button>
                                     </div>
                                 </div>
                             </form>
@@ -387,6 +387,9 @@
         <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
         <script src="js/EmailJS.js"></script>
         <script type="text/javascript">
+            function enableBtn(){
+                document.getElementById("submitFormBtn").disabled = false;
+            }
             $(function() {
                 $('a.page-scroll').bind('click', function(event) {
                     var $anchor = $(this);
