@@ -907,6 +907,10 @@ body {
     color: #91e6c7;
 }
 
+.controlText[data-filter=".purple"] {
+    color: #c591e6;
+}
+
 .controlText[data-filter=".blue"] {
     color: #5ecdde;
 }
@@ -964,6 +968,10 @@ body {
 
 .mix.green {
     color: #91e6c7;
+}
+
+.mix.purple {
+    color: #c591e6;
 }
 
 .mix.orange {
