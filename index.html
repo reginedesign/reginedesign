@@ -14,6 +14,7 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script type="text/javascript" src="js/circles.min.js"></script>
     <script src="js/mixitup.min.js"></script>
 </head>
@@ -341,7 +342,8 @@
                                         <div class="form-group">
                                             <input type="email" class="form-control" name="email" placeholder="Your email*" id="email" required data-validation-required-message="Please enter your email address." required="true">
                                             <p class="help-block text-danger"></p>
-                                        </div>                
+                                        </div>     
+                                        <div class="g-recaptcha" data-sitekey="6Lexw-QUAAAAAMQ_l_5aYg4E42wN6lRV-f41S6gl"></div>           
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -381,6 +383,7 @@
 
 
         </body>
+
         <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
         <script src="js/EmailJS.js"></script>
         <script type="text/javascript">
