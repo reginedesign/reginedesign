@@ -1,582 +1,221 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
-    <title>Regine Web Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.js"></script>
+  <meta charset="UTF-8">
+  <title>CodePen - Personal Webpage</title>
+  <title>BRADENGELHARDT</title>
+  <meta name="description" content="Web designer and front-end developer">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,400,600' rel='stylesheet' type='text/css'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'><link rel="stylesheet" href="./css/style2.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script type="text/javascript" src="js/circles.min.js"></script>
-    <script src="js/mixitup.min.js"></script>
+
 </head>
-<body id="page-top" class="index" data-pinterest-extension-installed="cr1.3.4">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Regine Design</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden active">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="">
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="">
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li class="">
-                        <a class="page-scroll" href="#skills">Skills</a>
-                    </li>
-                    <li class="">
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-heading">Regine Tan</div>
-                <div class="intro-lead-in">Graphic Designer - Animator - Illustrator - Special Effects</div>
-                <a href="#portfolio" class="page-scroll btn btn-xl">Portfolio</a>
-            </div>
-        </div>
-    </header>
-    <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-body" align="center">
-                    <img id="my_image" width="0" height="0" src=""/>
-                    <iframe id="my_video" width="0" height="0" src="" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+  <!-- navbar header -->
+  <div class="nav-header">
+    <div class="nav-brand">
+      <!--<img src="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/bradlogo2.png">-->
     </div>
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">Works I have done</h3>
-                </div>
+    <i class="fa fa-bars fa-3x"></i>
+    <div class="header-links">
+      <ul>
+        <li data-menuanchor="fourthPage"><a href="#contact">CONTACT</a></li>
+        <li data-menuanchor="thirdPage"><a href="#portfolio">PORTFOLIO</a></li>
+        <li data-menuanchor="secondPage"><a href="#about">ABOUT</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- end navbar header -->
 
-                <div class="controls">
-                    <!--<div class="control" data-filter="all">All</div>-->
-                    <div class="controlText" data-mixitup-control data-filter="all">All</div>
-                    <!--<div class="control" data-filter=".pink">Pink</div>-->
-                    <div class="controlText" data-mixitup-control data-filter=".pink">Animation</div>
-                    <!--<div class="control" data-filter=".blue">Blue</div>-->
-                    <div class="controlText" data-mixitup-control data-filter=".blue">Photography</div>
-                    <!--<div class="control" data-filter=".orange">Orange</div>-->
-                    <div class="controlText" data-mixitup-control data-filter=".orange">Illustration</div>
-                    <!--<div class="control" data-filter=".green">Green</div>-->
-                    <div class="controlText" data-mixitup-control data-filter=".green">Design</div>
+  <!-- sidebar slider -->
+  <div class="nav-screen">
+    <i class="fa fa-times fa-3x"></i>
+    <div class="nav-container">
+      <div class="nav-links">
+        <ul id='myMenu'>
+          <li data-menuanchor="secondPage"><a href="#about">ABOUT</a></li>
+          <li data-menuanchor="thirdPage"><a href="#portfolio">PORTFOLIO</a></li>
+          <li data-menuanchor="fourthPage"><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- end navbar slider -->
 
-                    <div class="controlText" data-mixitup-control data-filter=".purple">Work</div>
-                </div>
+  <!-- begin fullpage -->
 
-                <div class="mixItUpCon">
+  <div id="fullpage">
 
-                    <div class="mix pink openModal" data-source="https://www.youtube.com/embed/ghMwlauaJOA">
-                        <img src="img/Animation/CropstopAnim.jpg" alt="StopAnimation" />
-                    </div>
-                    <div class="mix pink openModal" data-source="https://www.youtube.com/embed/tQ56fiHtx5U">
-                        <img src="img/Animation/Crop3dPokemon.jpg" alt="DemoReel" />
-                    </div>
+    <!-- begin section -->
 
-                    <div class="mix blue openModal">
-                        <img src="img/Photography/Croptoothless.jpg" alt="toothless" />
-                    </div>
-                    <div class="mix blue openModal">
-                        <img src="img/Photography/Cropwood.jpg" alt="wooden floor" />
-                    </div>
-                    <div class="mix blue openModal">
-                        <img src="img/Photography/CropSilvey.jpg" alt="dog" />
-                    </div>
-                    <div class="mix blue openModal">
-                        <img src="img/Photography/Cropsilvey2.jpg" alt="dog" />
-                    </div>
-                    <div class="mix blue openModal">
-                        <img src="img/Photography/Cropbaby.jpg" alt="dog" />
-                    </div>
-                    <div class="mix blue openModal">
-                        <img src="img/Photography/CroprainbowTown.jpg" alt="Rainbow Village" />
-                    </div>
-                    <div class="mix blue openModal">
-                        <img src="img/Photography/Cropkorea.jpg" alt="korea" />
-                    </div>
-                    <div class="mix blue openModal">
-                        <img src="img/Photography/Croplights.jpg" alt="lights" />
-                    </div>
+    <div class="section aboutme" data-anchor="aboutme">
+      <div class="opaque-bg animated fadeInDown">
+        <h1 style="color:white">REGINE TAN</h1>
+        <p><span id="holder"></span><span class="blinking-cursor">|</span></p>
+      </div>
+      <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
+    </div>
+    <!-- end section -->
 
+    <!-- begin section -->
 
-                    <div class="mix orange openModal">
-                        <img src="img/Illustrations/SIS_project/FatUncle1.png" alt="CharacterDesign" />
-                    </div>
-                    <div class="mix orange openModal">
-                        <img src="img/Illustrations/SIS_project/guitar3.png" alt="CharacterDesign" />
-                    </div>
-                    <div class="mix orange openModal">
-                        <img src="img/Illustrations/SIS_project/CropchibiCOKE.jpg" alt="CharacterDesign" />
-                    </div>
-                    <div class="mix orange openModal">
-                        <img src="img/Illustrations/SIS_project/IdolTeacher2.png" alt="CharacterDesign" />
-                    </div>
-                    <div class="mix orange openModal">
-                        <img src="img/Illustrations/ndp/CropJJ_sai.jpg" alt="CharacterDesign" />
-                    </div>
-                    <div class="mix orange openModal">
-                        <img src="img/Illustrations/ndp/CropMeiyunn_sai.jpg" alt="CharacterDesign" />
-                    </div>
-                    <div class="mix orange openModal">
-                        <img src="img/Illustrations/CropTrainSketch2.jpg" alt="Sketch" />
-                    </div>
-                    <div class="mix orange openModal">
-                        <img src="img/Illustrations/OldFYP/blindGirl5.jpg" alt="CharacterDesign" />
-                    </div>
-                    <div class="mix orange openModal">
-                        <img src="img/Illustrations/Doodles/artchallenge_1.jpg" alt="CharacterDesign" />
-                    </div>
+    <div class="section" data-anchor="skills">
+      <div class="content">
+        <h1 class="wow fadeInDown" data-wow-delay="0.2s">ABOUT ME</h1>
+        <p class="wow fadeInDown" data-wow-delay="0.2s">Hi, I'm Regine! I'm a graphic designer, illustrator, and I know how to do simple special effects. Always doing my best with the skills I have!</p>
 
-                    <div class="mix green openModal">
-                        <img src="img/Illustrations/CropMagazine.jpg" alt="Layout" />
-                    </div>
-                    <div class="mix green openModal">
-                        <img src="img/Illustrations/CropCompany_Layout.jpg" alt="Layout" />
-                    </div>
-                    <div class="mix green openModal">
-                        <img src="img/Illustrations/CropFounder_Logo.jpg" alt="Logo" />
-                    </div>
-                    <div class="mix green openModal">
-                        <img src="img/Illustrations/CroppetHub_logo2.jpg" alt="Logo" />
-                    </div>
-                    <div class="mix green openModal">
-                        <img src="img/Illustrations/CropVectorme_09_Regine.jpg" alt="Logo" />
-                    </div>
-                    <div class="mix green openModal">
-                        <img src="img/Illustrations/CropFontArt-03.jpg" alt="Logo" />
-                    </div>
+        <div class=" wow fadeInUp container-skillbar" data-wow-delay="0.2s">
+          <div class="skillbar clearfix " data-percent="85%">
+            <div class="skillbar-title" style="background: #EBB035;"><span>Ai</span></div>
+            <div class="skillbar-bar" style="background: #f7b059;"></div>
+            <div class="skill-bar-percent">85%</div>
+          </div> <!-- End Skill Bar -->
+
+          <div class="skillbar clearfix " data-percent="60%">
+            <div class="skillbar-title" style="background: #06A2CB;"><span>Ps</span></div>
+            <div class="skillbar-bar" style="background: #5ecdde;"></div>
+            <div class="skill-bar-percent">60%</div>
+          </div> <!-- End Skill Bar -->
+
+          <div class="skillbar clearfix " data-percent="75%">
+            <div class="skillbar-title" style="background: #AB4DD2;"><span>Pr</span></div>
+            <div class="skillbar-bar" style="background: #de5ecd;"></div>
+            <div class="skill-bar-percent">70%</div>
+          </div> <!-- End Skill Bar -->
+
+          <div class="skillbar clearfix " data-percent="70%">
+            <div class="skillbar-title" style="background: #6840D4;"><span>Ae</span></div>
+            <div class="skillbar-bar" style="background: #a45ede;"></div>
+            <div class="skill-bar-percent">45%</div>
+          </div> <!-- End Skill Bar -->
 
 
-                    <div class="mix purple openModal">
-                        <img src="img/Work/Cropwork_portfolio-12.jpg" alt="Logo" />
-                    </div>
+          <div class="skillbar clearfix " data-percent="90%">
+            <div class="skillbar-title" style="background: #218559;"><span>SAI</span></div>
+            <div class="skillbar-bar" style="background: #91e6c7;"></div>
+            <div class="skill-bar-percent">90%</div>
+          </div> <!-- End Skill Bar -->
 
-                    <div class="gap"></div>
-                    <div class="gap"></div>
-                    <div class="gap"></div>
-                </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- end section -->
+
+    <!-- begin section -->
+
+    <div class="section" data-anchor="projects">
+      <div class="content-slide">
+        <div class="slide">
+          <h1 class="wow fadeInDown" data-wow-delay="0.2s">XFAIRE</h1>
+          <p class="wow fadeInDown" data-wow-delay="0.2s">Digital streaming service</p>
+          <img class="wow fadeInUp" data-wow-delay="0.2s" data-src="https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/xfaire.jpg">
+        </div>
+        <div class="slide">
+          <h1>MACHETE ENERGY</h1>
+          <p>Energy drink website</p>
+          <img data-src="https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/machete.jpg">
+        </div>
+        <div class="slide">
+          <h1>PORTFOLIO</h1>
+          <p>Mockup of a personal portfolio I was working on for a friend.</p>
+          <img data-src="https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/cascioportfolio.jpg">
+        </div>
+        <div class="slide">
+          <h1>THATONEBLOG</h1>
+          <p>Minimalist blogging platform.</p>
+          <img data-src="https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/blog.jpg">
+        </div>
+        <div class="slide">
+          <h1>PIXBORED</h1>
+          <p>Website for sharing images and gifs.</p>
+          <img data-src="https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/pixbored.jpg">
+        </div>
+        <div class="slide">
+          <h1>PERSONAL WEBSITE</h1>
+          <p>Responsive vertical/horizontal header website theme.</p>
+          <img data-src="https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/personalsite.jpg">
+        </div>
+      </div>
+    </div>
+    <!-- end section -->
+
+    <!-- begin section -->
+
+    <div class="section" data-anchor="contact">
+      <div class="content wow fadeInDown" data-wow-delay="0.2s">
+        <h1>CONTACT ME</h1>
+        <p>Whether you're interested in working with me or just want to say hello, I'd love to hear from you!</p>
+        <br>
+        <div class="contact-form">
+
+          <div id="form-messages"></div>
+          <form name="sentMessage" id="contactForm" method="post" validate>
+            <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="0.6s">
+              <input type="text" class="form-control" id="name" name="name" placeholder="NAME" data-error="Field can't be blank!" required>
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              <div class="help-block with-errors"></div>
             </div>
-        </section>
 
-        <!-- About Section -->
-        <section id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2 class="section-heading">About</h2>
-                        <h3 class="section-subheading text-muted">My life journey</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <ul class="timeline">
-                            <li>
-                                <div class="timeline-image">
-                                    <img class="img-circle img-responsive" alt="">
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4>2015 - 2018</h4>
-                                        <h4 class="subheading">Graduated from Republic Polytechnic</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p class="text-muted">The first step of my journey in learning the fundamental to pursue my career in designing.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="timeline-inverted">
-                                <div class="timeline-image">
-                                    <img class="img-circle img-responsive" alt="">
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4>2018 - 2019</h4>
-                                        <h4 class="subheading">Junior Media Specialist @ FULIFE</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p class="text-muted">Design a bunch of corporate designs such as poster, EDM and brochure.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="timeline-image">
-                                    <img class="img-circle img-responsive" alt="">
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4>2019 - Present</h4>
-                                        <h4 class="subheading">Freelance Designer</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p class="text-muted">Had the opportunity to work with other talented people to produce fantastic results.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="timeline-inverted">
-                                <div class="timeline-image">
-                                    <h4>Be Part
-                                        <br>Of My
-                                        <br>Story!</h4>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <div class="form-group has-feedback wow fadeInRight" data-wow-delay="0.8s">
+              <input type="email" class="form-control" id="email" name="email" placeholder="EMAIL" data-error="Field can't be blank!" required>
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              <div class="help-block with-errors"></div>
+            </div>
 
-            <!-- Skills Section -->
-            <section id="skills" class="bg-light-gray">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 text-center">
-                            <h2 class="section-heading">My skill set</h2>
-                            <h3 class="section-subheading text-muted">My proficiency</h3>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <h4>Photoshop</h4>
-                                <br/>
-                                <div class="circle" id="photoshop"></div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <h4>Illustrator</h4>
-                                <br/>
-                                <div class="circle" id="illustrator"></div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <h4>Premiere Pro</h4>
-                                <br/>
-                                <div class="circle" id="premierePro"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <h4>Affter Effects</h4>
-                                <br/>
-                                <div class="circle" id="affterEffects"></div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <h4>PaintTool SAI</h4>
-                                <br/>
-                                <div class="circle" id="paintTool"></div>                   
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="team-member">
-                                <h4>Many more to come</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="1s">
+              <textarea data-minlength="10" class="form-control" id="message" name="message" placeholder="MESSAGE" data-error="Minimum of 10 characters" required></textarea>
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              <div class="help-block with-errors"></div>
+            </div>
 
-            <!-- Contacts Section -->
-            <section id="contact">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 text-center">
-                            <h2 class="section-heading">Contact me</h2>
-                            <h3 class="section-subheading text-muted" style="color: white;">Let's work together!</h3>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <form name="sentMessage" id="contactForm" method="post" validate>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Your Name*" id="name" required="" data-validation-required-message="Please enter your name." required="true">
-                                            <p class="help-block text-danger"></p>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" name="email" placeholder="Your Email*" id="email" required data-validation-required-message="Please enter your email address." required="true">
-                                            <p class="help-block text-danger"></p>
-                                        </div>     
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <textarea rows="5" class="form-control" name="message" placeholder="Message*" id="message" required data-validation-required-message="Your message*" required="true"></textarea>
-                                            <p class="help-block text-danger"></p>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="col-lg-12 text-center">
-                                    	<div class="g-recaptcha" style="display: inline-block;" data-sitekey="6Lexw-QUAAAAAMQ_l_5aYg4E42wN6lRV-f41S6gl" data-callback="enableBtn"></div>
-                                        <div id="success"></div>
-                                        <button id="submitFormBtn" type="submit" class="btn btn-xl" disabled="true">Send Message</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <div class="g-recaptcha" style="display: inline-block;" data-sitekey="6Lexw-QUAAAAAMQ_l_5aYg4E42wN6lRV-f41S6gl" data-callback="enableBtn"></div>
 
-            <footer>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <span class="copyright">Copyright © RegineDesign 2020</span>
-                        </div>
-                        <div class="col-md-4">
-                            <ul class="list-inline social-buttons">
-                                <li><a href="https://www.facebook.com/reginetanweilin"><i class="fa fa-facebook"></i></a>
-                                </li>
-                                <li><a href="https://www.linkedin.com/in/regine-tan-aba2b6144/"><i class="fa fa-linkedin"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <div class="wow fadeInUp" data-wow-delay="1s">
+              <button type="submit" id="submitFormBtn" name="submit" disabled="true" class="btn btn-lg">SEND MESSAGE</button>
+            </div>
+          </form>
+          <br>
+        </div>
+      </div>
+    </div>
+    <!-- end section -->
 
+    <!-- begin section -->
 
-        </body>
+    <div class="section fp-auto-height">
+      <div class="footer">
+        <p>CONNECT WITH ME</p>
+        <div class="social-links">
+          <span><a href="https://www.linkedin.com/in/bradleyengelhardt" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></span>
+          <span><a target="_blank" href="https://twitter.com/bradengelhardt" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></span>
+          <span><a href="https://github.com/SquishyAndroid" target="_blank"><i class="fa fa-github fa-2x"></i></a></span>
+          <span><a href="https://codepen.io/SquishyAndroid/pens/public/"><i class="fa fa-codepen fa-2x"></i></a></span>
+        </div>
+      </div>
+    </div>
+    <!-- end section -->
 
-        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-        <script src="js/EmailJS.js"></script>
-        <script type="text/javascript">
-            function enableBtn(){
-                document.getElementById("submitFormBtn").disabled = false;
-            }
-            
-            $(function() {
-                $('a.page-scroll').bind('click', function(event) {
-                    var $anchor = $(this);
-                    $('html, body').stop().animate({
-                        scrollTop: $($anchor.attr('href')).offset().top
-                    }, 1500, 'easeInOutExpo');
-                    event.preventDefault();
-                });
-            });
+  </div>
+  <!-- end fullpage -->
+</body>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js'></script><script  src="./js/script.js"></script>
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="js/EmailJS.js"></script>
+<script type="text/javascript">
+  function enableBtn(){
+    document.getElementById("submitFormBtn").disabled = false;
+  }
+</script>
 
-            var deviceWidth = 0;
-
-            for (var i = 100; !window.matchMedia('(max-device-width: ' + i + 'px)').matches; i++) {
-                deviceWidth = i;
-            }
-
-            deviceWidth-=100;
-
-            if (deviceWidth > 600){
-                deviceWidth = 600
-            }
-
-            $('.openModal').on('click',function(){
-                var img = new Image();
-                var imgTag = $(this).html()
-                var media = $(imgTag).attr("src");
-                $('#my_image').attr('src','');
-                $('#my_image').attr('width',0);
-                $('#my_image').attr('height',0);
-                $('#my_video').attr('src','');
-                $('#my_video').attr('width',0);
-                $('#my_video').attr('height',0);
-
-                if(media.includes('Crop')){
-                    media = media.replace('Crop','');
-                }  
-
-                if(media.includes('Animation')){
-                    var vidSrc = $(this).attr("data-source");
-                    $('#my_video').attr('src',vidSrc);
-                    var width = 560;
-                    var height = 315;
-
-                    while(width > deviceWidth){
-                        height = height/1.2;
-                        width = width/1.2;
-                    }
-                    $('#my_video').attr('width',width);
-                    $('#my_video').attr('height',height);
-
-                    $('#myModal').modal({show:true});
-                }else{  
-
-                    img.src = media;
-                    img.onload = function() {
-
-                        var width = this.width;
-                        var height = this.height;
-                        console.log("height = " + height + "  width = " + width);
-
-                        while(width > deviceWidth){
-                            height = height/1.2;
-                            width = width/1.2;
-                            console.log("height = " + height + "  width = " + width + " Device width: " + deviceWidth);
-                        }
-
-
-                        $('#my_image').attr('src',media);
-                        $('#my_image').attr('width',width);
-                        $('#my_image').attr('height',height);
-                        $('#myModal').modal({show:true});
-                    }
-                }
-            });
-
-            // Highlight the top nav as scrolling occurs
-            $('body').scrollspy({
-                target: '.navbar-fixed-top'
-            })
-
-            // Closes the Responsive Menu on Menu Item Click
-            $('.navbar-collapse ul li a').click(function() {
-                $('.navbar-toggle:visible').click();
-            });
-
-            //Porfolio
-            var containerEl = document.querySelector('.mixItUpCon');
-            var mixer = mixitup(containerEl, {
-                selectors: {
-                    control: '[data-mixitup-control]'
-                },
-                callbacks: {
-                    onMixClick: function(state, e) {
-                        e.stopPropagation();
-                    }
-                }
-            });
-
-            //Skill set
-            var myCircle = Circles.create({
-              id:                  'photoshop',
-              radius:              60,
-              value:               60,
-              maxValue:            100,
-              width:               10,
-              text:                function(value){return value + '%';},
-              colors:              ['#d2f9fa', '#5ecdde'],
-              duration:            400,
-              wrpClass:            'circles-wrp',
-              textClass:           'circles-text',
-              valueStrokeClass:    'circles-valueStroke',
-              maxValueStrokeClass: 'circles-maxValueStroke',
-              styleWrapper:        true,
-              styleText:           true
-          });
-
-            var myCircle = Circles.create({
-               id:                  'illustrator',
-               radius:              60,
-               value:               85,
-               maxValue:            100,
-               width:               10,
-               text:                function(value){return value + '%';},
-               colors:              ['#fae0c5', '#f7b059'],
-               duration:            400,
-               wrpClass:            'circles-wrp',
-               textClass:           'circles-text',
-               valueStrokeClass:    'circles-valueStroke',
-               maxValueStrokeClass: 'circles-maxValueStroke',
-               styleWrapper:        true,
-               styleText:           true
-           });
-
-
-            var myCircle = Circles.create({
-               id:                  'premierePro',
-               radius:              60,
-               value:               75,
-               maxValue:            100,
-               width:               10,
-               text:                function(value){return value + '%';},
-               colors:              ['#f9defa', '#de5ecd'],
-               duration:            400,
-               wrpClass:            'circles-wrp',
-               textClass:           'circles-text',
-               valueStrokeClass:    'circles-valueStroke',
-               maxValueStrokeClass: 'circles-maxValueStroke',
-               styleWrapper:        true,
-               styleText:           true
-           });
-
-            var myCircle = Circles.create({
-               id:                  'affterEffects',
-               radius:              60,
-               value:               70,
-               maxValue:            100,
-               width:               10,
-               text:                function(value){return value + '%';},
-               colors:              ['#e3c8f7', '#a45ede'],
-               duration:            400,
-               wrpClass:            'circles-wrp',
-               textClass:           'circles-text',
-               valueStrokeClass:    'circles-valueStroke',
-               maxValueStrokeClass: 'circles-maxValueStroke',
-               styleWrapper:        true,
-               styleText:           true
-           });
-
-            var myCircle = Circles.create({
-                id:                  'paintTool',
-                radius:              60,
-                value:               90,
-                maxValue:            100,
-                width:               10,
-                text:                function(value){return value + '%';},
-                colors:              ['#cdf7d3', '#91e6c7'],
-                duration:            400,
-                wrpClass:            'circles-wrp',
-                textClass:           'circles-text',
-                valueStrokeClass:    'circles-valueStroke',
-                maxValueStrokeClass: 'circles-maxValueStroke',
-                styleWrapper:        true,
-                styleText:           true
-            });
-        </script>
-        </html>
+</body>
+</html>
