@@ -708,3 +708,182 @@ label {
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
+
+/* Controls
+---------------------------------------------------------------------- */
+.portfolio{
+  margin-left: auto;
+  margin-right: auto;
+  width:90%;
+}
+.controls {
+    padding: 1em;
+}
+
+.controlText {
+    position: relative;
+    display:inline-block;
+    padding-left:1em;
+    cursor: pointer;
+    font-size:1.5em;
+}
+
+.controlText[data-filter]:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top:calc(12%);
+    left: calc(5% - 8px);
+    border: 2px solid currentColor;
+    border-radius: 2px;
+    background: currentColor;
+    transition: background-color 150ms, border-color 150ms;
+}
+
+
+.mixitup-control-active[data-filter]:after {
+    background: transparent;
+}
+
+.controlText[data-filter]{
+    margin-left: .75rem;
+}
+
+
+.controlText[data-filter=".pink"] {
+    color: #d595aa;
+}
+
+.controlText[data-filter=".green"] {
+    color: #91e6c7;
+}
+
+.controlText[data-filter=".purple"] {
+    color: #c591e6;
+}
+
+.controlText[data-filter=".blue"] {
+    color: #5ecdde;
+}
+
+.controlText[data-filter=".orange"] {
+    color: #f7b059;
+}
+
+/* Container
+---------------------------------------------------------------------- */
+
+.mixItUpCon {
+    padding: 1rem;
+    text-align: justify;
+    font-size: 0.1px;
+}
+
+.mixItUpCon:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    overflow-y:scroll;
+}
+
+/* Target Elements
+---------------------------------------------------------------------- */
+
+.mix,
+.gap {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.crop {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.crop img {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+}
+
+.mix {
+    background: #fff;
+    border-top: .5rem solid currentColor;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+    margin:0.333rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.mix img{
+  width: 100%;
+  height: auto;
+}
+
+.mix:before {
+    content: '';
+    display: inline-block;
+}
+
+.mix.pink {
+    color: #d595aa;
+}
+
+.mix.green {
+    color: #91e6c7;
+}
+
+.mix.purple {
+    color: #c591e6;
+}
+
+.mix.orange {
+    color: #f7b059;
+}
+
+.mix.blue {
+    color: #5ecdde;
+}
+
+/* Grid Breakpoints
+---------------------------------------------------------------------- */
+
+/* 2 Columns */
+
+.mix,
+.gap {
+    width: calc(100%/2 - (((2 - 1) * 1rem) / 2));
+}
+
+/* 3 Columns */
+
+@media screen and (min-width: 541px) {
+    .mix,
+    .gap {
+        width: calc(100%/3 - (((3 - 1) * 1rem) / 3));
+    }
+}
+
+/* 4 Columns */
+
+@media screen and (min-width: 961px) {
+    .mix,
+    .gap {
+        width: calc(100%/4 - (((4 - 1) * 1rem) / 4));
+    }
+}
+
+/* 5 Columns */
+
+@media screen and (min-width: 1281px) {
+    .mix,
+    .gap {
+        width: calc(100%/5 - (((5 - 1) * 1rem) / 5));
+    }
+}

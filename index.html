@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./css/style.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.js"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js" integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A==" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -68,10 +68,10 @@
 
     <div class="section" data-anchor="skills">
       <div class="content">
-        <h1 class="wow fadeInDown" data-wow-delay="0.2s">ABOUT ME</h1>
-        <p class="wow fadeInDown" data-wow-delay="0.2s">Hi, I'm Regine! I'm a graphic designer, illustrator, and I know how to do simple special effects. Always doing my best with the skills I have!</p>
+        <h1>ABOUT ME</h1>
+        <p>Hi, I'm Regine! I'm a graphic designer, illustrator, and I know how to do simple special effects. Always doing my best with the skills I have!</p>
 
-        <div class=" wow fadeInUp container-skillbar" data-wow-delay="0.2s">
+        <div class="container-skillbar">
           <div class="skillbar clearfix " data-percent="85%">
             <div class="skillbar-title" style="background: #EBB035;"><span>Ai</span></div>
             <div class="skillbar-bar" style="background: #f7b059;"></div>
@@ -111,15 +111,33 @@
 
     <!-- begin section -->
 
-    <div class="section" data-anchor="projects">
-      Coming Soon!
+    <div id="app" class="section" data-anchor="projects">
+      <div class="portfolio">
+        <h1>Portfolio</h1>
+        <div v-if="isLoading">
+          <p>Please wait while the images load....</p>
+        </div>
+        <div v-show="!isLoading">
+          <div class="controls">
+            <div class="controlText" data-mixitup-control data-filter="all"><p>All</p></div>
+            <div v-for="(oneCat, index) in folders" class="controlText" data-mixitup-control :data-filter="'.'+colours[index]"><p>{{oneCat}}</p></div>
+          </div>
+          <div class="mixItUpCon">
+            <template  v-for="(oneCat, index) in folders">
+              <div v-for="file in files[oneCat]" :class="'crop mix ' + colours[index]">
+                <img :src="file.mediaLink" alt="StopAnimation" @load="onImgLoad"/>
+              </div>
+            </template >
+          </div>
+        </div>
+      </div>
     </div>
     <!-- end section -->
 
     <!-- begin section -->
 
     <div class="section" data-anchor="contact">
-      <div class="content wow fadeInLeft" data-wow-delay="0.2s">
+      <div class="content">
         <h1>CONTACT ME</h1>
         <p>Whether you're interested in working with me or just want to say hello, I'd love to hear from you!</p>
         <br>
@@ -177,18 +195,78 @@
   <!-- end fullpage -->
 </body>
 <!-- partial -->
+  
   <script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
   crossorigin="anonymous"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js'></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js" integrity="sha512-bxzECOBohzcTcWocMAlNDE2kYs0QgwGs4eD8TlAN2vfovq13kfDfp95sJSZrNpt0VMkpP93ZxLC/+WN/7Trw2g==" crossorigin="anonymous"></script>  <script  src="./js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.js" integrity="sha512-13ryG34lkmhOD5L4DTd7z1AmhUl+bhFfE7xmMvs5K3Tm9O4ua0VZs8FBuBgI4AGIAB2icf3FtGQ/fpZUGFcnkA==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js" integrity="sha512-bxzECOBohzcTcWocMAlNDE2kYs0QgwGs4eD8TlAN2vfovq13kfDfp95sJSZrNpt0VMkpP93ZxLC/+WN/7Trw2g==" crossorigin="anonymous"></script>  
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="js/EmailJS.js"></script>
+  <script  src="./js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
   <script type="text/javascript">
-    function enableBtn(){
-      document.getElementById("submitFormBtn").disabled = false;
-    }
+  const app = new Vue({
+            el: '#app',
+            data: {
+              folders:[],
+              files:null,
+              colours:['pink', 'blue', 'orange', 'green', 'purple'],
+              isLoading:false,
+            },
+            async mounted() {
+              this.isLoading = true;
+              await this.getPublic();
+              this.initializeMix()
+            },
+            methods: {
+              initializeMix(){
+                var containerEl = document.querySelector('.mixItUpCon');
+                var mixer = mixitup(containerEl, {
+                    animation: {
+                        enable: false,
+                        queueLimit: 5,
+                    },
+                    selectors: {
+                        control: '[data-mixitup-control]'
+                    },
+                    callbacks: {
+                        onMixClick: function(state, e) {
+                            e.stopPropagation();
+                            try{
+                              $.fn.fullpage.reBuild();
+                            }catch(err){
+                              console.log(err)
+                            }
+                        }
+                    }
+                });
+              },
+              onImgLoad () {
+                this.isLoading = false;
+                $.fn.fullpage.reBuild();
+              },
+              async getPublic() {
+                this.isLoading = true;
+                var config = {
+                  headers: {'Access-Control-Allow-Origin': '*'}
+                };  
+                await axios.get('https://reginedesignadminpanel.azurewebsites.net/PublicApi/GetAllItemInStorage', config)
+                    .then(({ data }) => {
+                        console.log(data)
+                        this.folders = data.folders;
+                        this.files = data.allFiles;
+                    })
+                    .catch(error => {
+                        this.isLoading = false;
+                        console.log(error);
+                    });
+              },
+            },
+          });
   </script>
 </html>
