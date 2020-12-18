@@ -207,6 +207,7 @@ p {
   background: url("../img/background/colorPencil.jpg")
     no-repeat;
   background-size: cover;
+  background-position: 50% 0;
 }
 
 .aboutme p {
