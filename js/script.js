@@ -82,7 +82,7 @@ $(document).ready(function () {
     navigationTooltips: ["home", "about", "portfolio", "contact", "connect"],
     anchors: ["home", "about", "portfolio", "contact", "connect"],
     menu: "#myMenu",
-    fitToSection: false,
+    fitToSection: true,
 
     afterLoad: function (anchorLink, index) {
       var loadedSection = $(this);
@@ -141,7 +141,7 @@ $(document).ready(function () {
 
   // smooth scrolling
   $(function () {
-    $("a[href*=#]:not([href=#])").click(function () {
+    $("a[href*=\\#]:not([href=\\#])").click(function () {
       if (
         location.pathname.replace(/^\//, "") ==
           this.pathname.replace(/^\//, "") &&
