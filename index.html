@@ -285,10 +285,7 @@
               },
               async getPublic() {
                 this.isLoading = true; 
-                var config = {
-                    headers: {'Access-Control-Allow-Origin': '*'}
-                };
-                await axios.get('https://reginedesignadminpanel.azurewebsites.net/PublicApi/GetAllItemInStorage', config)
+                await axios.get('https://reginedesignadminpanel.azurewebsites.net/PublicApi/GetAllItemInStorage')
                     .then(({ data }) => {
                         console.log(data)
                         this.folders = data.folders;
