@@ -83,7 +83,6 @@ $("#fullpage").fullpage({
     navigationTooltips: ["home", "about", "portfolio", "contact", "connect"],
     anchors: ["home", "about", "portfolio", "contact", "connect"],
     scrollOverflow: true,
-    scrollOverflowReset: true,
     menu: "#myMenu",
     fitToSection: true,
 
@@ -117,7 +116,7 @@ $("#fullpage").fullpage({
               {
                 width: $(this).attr("data-percent")
               },
-              2500
+              1000
             );
         });
       }
