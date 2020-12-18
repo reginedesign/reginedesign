@@ -114,6 +114,7 @@
     <div id="app" class="section" data-anchor="projects">
       <div class="portfolio">
         <br/>
+        <br/>
         <h1>Portfolio</h1>
         <div v-if="isLoading">
           <p>Please wait while my portfolio load....</p>
@@ -229,8 +230,8 @@
                 var containerEl = document.querySelector('.mixItUpCon');
                 var mixer = mixitup(containerEl, {
                     animation: {
-                        enable: false,
-                        queueLimit: 5,
+                        enable: true,
+                        queueLimit: 10,
                     },
                     selectors: {
                         control: '[data-mixitup-control]'
@@ -238,11 +239,9 @@
                     callbacks: {
                         onMixClick: function(state, e) {
                             e.stopPropagation();
-                            try{
-                              $.fn.fullpage.reBuild();
-                            }catch(err){
-                              console.log(err)
-                            }
+                        },
+                        onMixEnd: function(state) {
+                            $.fn.fullpage.reBuild();
                         }
                     }
                 });

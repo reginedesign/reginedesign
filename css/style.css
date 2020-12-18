@@ -858,7 +858,7 @@ label {
 
 .mix,
 .gap {
-    width: calc(100%/2 - (((2 - 1) * 1rem) / 2));
+    width: calc(100%/2 - (((2 - 1) * 1.33rem) / 2));
 }
 
 /* 3 Columns */
@@ -866,7 +866,7 @@ label {
 @media screen and (min-width: 541px) {
     .mix,
     .gap {
-        width: calc(100%/3 - (((3 - 1) * 1rem) / 3));
+        width: calc(100%/3 - (((3 - 1) * 1.33rem) / 3));
     }
 }
 
@@ -875,7 +875,7 @@ label {
 @media screen and (min-width: 961px) {
     .mix,
     .gap {
-        width: calc(100%/4 - (((4 - 1) * 1rem) / 4));
+        width: calc(100%/4 - (((4 - 1) * 1.33rem) / 4));
     }
 }
 
@@ -884,6 +884,6 @@ label {
 @media screen and (min-width: 1281px) {
     .mix,
     .gap {
-        width: calc(100%/5 - (((5 - 1) * 1rem) / 5));
+        width: calc(100%/5 - (((5 - 1) * 1.33rem) / 5));
     }
 }
