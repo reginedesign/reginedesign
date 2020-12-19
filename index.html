@@ -270,10 +270,8 @@
                 });
               },
               closeModal(){
-                $.fn.fullpage.setMouseWheelScrolling(true);
-                $.fn.fullpage.setAllowScrolling(true);
-                $.fn.fullpage.reBuild();
                 this.imageModal.hide();
+                $.fn.fullpage.setAllowScrolling(true);
               },
               openImageModal(src, videoLink){
                 if(videoLink == null){
@@ -283,7 +281,6 @@
                   this.isVideo = true;
                   this.chosenSource = videoLink;
                 }
-                $.fn.fullpage.setMouseWheelScrolling(false);
                 $.fn.fullpage.setAllowScrolling(false);
                 this.imageModal.show();
               },
