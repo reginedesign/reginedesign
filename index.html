@@ -224,8 +224,7 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.js" integrity="sha512-13ryG34lkmhOD5L4DTd7z1AmhUl+bhFfE7xmMvs5K3Tm9O4ua0VZs8FBuBgI4AGIAB2icf3FtGQ/fpZUGFcnkA==" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js" integrity="sha512-0xW5KFMtT462F65vVvIejNawM1U2Fp/yhItmQVFUwdYP+R9tQFCn4QtLEhkp6RoGovZ6YCvbxy+GVCtGv0+nvA==" crossorigin="anonymous"></script>
-<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js" integrity="sha512-bxzECOBohzcTcWocMAlNDE2kYs0QgwGs4eD8TlAN2vfovq13kfDfp95sJSZrNpt0VMkpP93ZxLC/+WN/7Trw2g==" crossorigin="anonymous"></script>  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js" integrity="sha512-bxzECOBohzcTcWocMAlNDE2kYs0QgwGs4eD8TlAN2vfovq13kfDfp95sJSZrNpt0VMkpP93ZxLC/+WN/7Trw2g==" crossorigin="anonymous"></script> 
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="js/EmailJS.js"></script>
   <script  src="./js/script.js"></script>
@@ -247,11 +246,15 @@
               this.isLoading = true;
               await this.getPublic();
               this.initializeMix()
-              this.imageModal = new bootstrap.Modal(document.getElementById('imageModal'), {
-                keyboard: false
-              })
+              this.initializeModal();
+
             },
             methods: {
+              initializeModal(){
+                this.imageModal = new bootstrap.Modal(document.getElementById('imageModal'),{
+                  keyboard:false
+                });
+              },
               initializeMix(){
                 var containerEl = document.querySelector('.mixItUpCon');
                 var mixer = mixitup(containerEl, {
