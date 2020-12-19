@@ -273,6 +273,7 @@
               },
               closeModal(){
                 this.imageModal.hide();
+                $.fn.fullpage.reBuild();
               },
               openImageModal(src, videoLink){
                 if(videoLink == null){
