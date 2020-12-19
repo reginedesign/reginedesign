@@ -84,7 +84,6 @@ $("#fullpage").fullpage({
     anchors: ["home", "about", "portfolio", "contact", "connect"],
     scrollOverflow: true,
     menu: "#myMenu",
-    normalScrollElements:"#imageModal",
     fitToSection: true,
 
     afterLoad: function (anchorLink, index) {
