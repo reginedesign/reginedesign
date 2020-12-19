@@ -141,7 +141,7 @@
             <div class="mixItUpCon">
               <template  v-for="(oneCat, index) in folders">
                 <div v-for="file in files[oneCat]" :class="'crop mix ' + colours[index]" @click='openImageModal(file.mediaLink, file.videoLink)'>
-                  <img :src="file.mediaLink" alt="StopAnimation" @load="onImgLoad"/>
+                  <img :data-src="file.mediaLink" alt="StopAnimation" @load="onImgLoad"/>
                 </div>
               </template >
             </div>
@@ -271,7 +271,6 @@
               },
               closeModal(){
                 this.imageModal.hide();
-                $.fn.fullpage.setAllowScrolling(true);
               },
               openImageModal(src, videoLink){
                 if(videoLink == null){
@@ -281,7 +280,6 @@
                   this.isVideo = true;
                   this.chosenSource = videoLink;
                 }
-                $.fn.fullpage.setAllowScrolling(false);
                 this.imageModal.show();
               },
               onImgLoad () {
