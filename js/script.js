@@ -85,6 +85,7 @@ $("#fullpage").fullpage({
     scrollOverflow: true,
     menu: "#myMenu",
     normalScrollElements:".modal",
+    scrollOverflowReset: true,
     fitToSection: true,
 
     afterLoad: function (anchorLink, index) {
