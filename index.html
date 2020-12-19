@@ -18,7 +18,7 @@
 <body>
   <div id="app">
         <!-- Modal -->
-        <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true" v-if="modalShown">
           <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down modal-dialog-scrollable">
             <div class="modal-content">
               <div class="modal-header">
@@ -241,6 +241,7 @@
               chosenSource:"",
               imageModal: null,
               isVideo:false,
+              modalShown:true,
             },
             async mounted() {
               this.isLoading = true;
@@ -254,6 +255,7 @@
                 this.imageModal = new bootstrap.Modal(document.getElementById('imageModal'),{
                   keyboard:false
                 });
+                this.modalShown = false;
               },
               initializeMix(){
                 var containerEl = document.querySelector('.mixItUpCon');
@@ -277,6 +279,7 @@
               },
               closeModal(){
                 this.imageModal.hide();
+                this.modalShown = false;
                 $.fn.fullpage.reBuild();
               },
               openImageModal(src, videoLink){
@@ -287,6 +290,7 @@
                   this.isVideo = true;
                   this.chosenSource = videoLink;
                 }
+                this.modalShown = true;
                 this.imageModal.show();
               },
               onImgLoad () {
