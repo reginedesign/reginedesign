@@ -24,9 +24,11 @@
               <div class="modal-header">
                 <button type="button" class="btn-close" @click="closeModal()"></button>
               </div>
-              <div class="modal-body align-content-center">
-                  <img class="img-fluid img-modal-center" v-if="!isVideo" :src="chosenSource"/>
-                  <iframe class="img-fluid img-modal-center video-aspect" v-if="isVideo" :src="chosenSource" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div class="modal-body" v-if="!isVideo" >
+                  <img class="img-fluid img-modal-center" :src="chosenSource"/>
+              </div>
+              <div class="modal-body align-content-center" v-if="isVideo" >
+                  <iframe class="img-fluid img-modal-center video-aspect" :src="chosenSource" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
             </div>
           </div>
