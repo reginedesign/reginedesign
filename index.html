@@ -22,9 +22,9 @@
           <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down modal-dialog-scrollable">
             <div class="modal-content">
               <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" @click="closeModal()"></button>
               </div>
-              <div class="modal-body align-content-center">
+              <div class="modal-body">
                   <img class="img-fluid img-modal-center" v-if="!isVideo" :src="chosenSource"/>
                   <iframe class="img-fluid img-modal-center video-aspect" v-if="isVideo" :src="chosenSource" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
@@ -269,6 +269,11 @@
                     }
                 });
               },
+              closeModal(){
+                $.fn.fullpage.setMouseWheelScrolling(true);
+                $.fn.fullpage.setAllowScrolling(true);
+                this.imageModal.hide();
+              },
               openImageModal(src, videoLink){
                 if(videoLink == null){
                   this.isVideo = false;
@@ -277,6 +282,8 @@
                   this.isVideo = true;
                   this.chosenSource = videoLink;
                 }
+                $.fn.fullpage.setMouseWheelScrolling(false);
+                $.fn.fullpage.setAllowScrolling(false);
                 this.imageModal.show();
               },
               onImgLoad () {
