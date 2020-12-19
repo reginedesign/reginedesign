@@ -272,6 +272,7 @@
               closeModal(){
                 $.fn.fullpage.setMouseWheelScrolling(true);
                 $.fn.fullpage.setAllowScrolling(true);
+                $.fn.fullpage.reBuild();
                 this.imageModal.hide();
               },
               openImageModal(src, videoLink){
