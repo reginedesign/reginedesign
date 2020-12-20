@@ -138,12 +138,17 @@
           <div v-show="!isLoading">
             <div class="controls">
               <div class="controlText" data-mixitup-control data-filter="all"><p>All</p></div>
-              <div v-for="(oneCat, index) in folders" class="controlText" data-mixitup-control :data-filter="'.'+colours[index]"><p>{{oneCat}}</p></div>
+              <div v-for="(oneCat, index) in folders" class="controlText" data-mixitup-control :style="'color:'+colours[index]" :data-filter="'.'+oneCat"><p>{{oneCat}}</p></div>
             </div>
             <div class="mixItUpCon">
               <template  v-for="(oneCat, index) in folders">
-                <div v-for="file in files[oneCat]" :class="'crop mix ' + colours[index]" @click='openImageModal(file.mediaLink, file.videoLink)'>
-                  <img :data-src="file.mediaLink" alt="StopAnimation"/>
+                <div v-for="file in files[oneCat]" :style="'color:'+colours[index]" :class="'crop mix ' + oneCat" @click='openImageModal(file.mediaLink, file.videoLink)'>
+                  <div class="w-100 d-flex justify-content-center align-items-center loader" v-if="isFileLoading[file.name]">
+                    <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                  </div>
+                  <img style="position: relative;" :src="file.mediaLink" :alt="file.name" @load="onImgLoad(file.name)"/>
                 </div>
               </template >
             </div>
@@ -230,17 +235,19 @@
   <script  src="./js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.6.1/randomColor.min.js" integrity="sha512-vPeZ7JCboHcfpqSx5ZD+/jpEhS4JpXxfz9orSvAPPj0EKUVShU2tgy7XkU+oujBJKnWmu4hU7r9MMQNWPfXsYw==" crossorigin="anonymous"></script>
   <script type="text/javascript">
   const app = new Vue({
             el: '#app',
             data: {
               folders:[],
               files:null,
-              colours:['pink', 'blue', 'orange', 'green', 'purple'],
+              colours:[],
               isLoading:false,
               chosenSource:"",
               imageModal: null,
               isVideo:false,
+              isFileLoading: [],
             },
             async mounted() {
               this.isLoading = true;
@@ -290,18 +297,41 @@
                 $.fn.fullpage.setAllowScrolling(false)
                 this.imageModal.show();
               },
+              onImgLoad (name) {
+                this.isFileLoading[name] = false;
+                $.fn.fullpage.reBuild();
+              },
               async getPublic() {
                 this.isLoading = true; 
-                await axios.get('https://reginedesignadminpanel.azurewebsites.net/PublicApi/GetAllItemInStorage')
+                let tempFiles = {};
+                var config = {
+                    headers: {'Access-Control-Allow-Origin': '*'}
+                };
+                await axios.get('https://reginedesignadminpanel.azurewebsites.net/PublicApi/GetAllItemInStorage', config)
                     .then(({ data }) => {
                         console.log(data)
                         this.folders = data.folders;
+                        this.folders.forEach(function(category) {
+                          for (var i = data.allFiles[category].length - 1; i >= 0; i--) {
+                            let name = data.allFiles[category][i].name
+                            tempFiles[name] = true;
+                          }
+                        }) 
+                        this.colours = randomColor({luminosity: 'light',count: this.folders.length});
+                        this.isFileLoading = tempFiles;
                         this.files = data.allFiles;
+                        this.isLoading = false;
                     })
                     .catch(error => {
                         this.isLoading = false;
                         console.log(error);
                     });
+              },
+              generateRandomColor()
+              {
+                  var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+                  return randomColor;
+                  //random color will be freshly served
               },
             },
           });
