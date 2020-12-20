@@ -116,7 +116,7 @@ $("#fullpage").fullpage({
               {
                 width: $(this).attr("data-percent")
               },
-              1000
+              800
             );
         });
       }
